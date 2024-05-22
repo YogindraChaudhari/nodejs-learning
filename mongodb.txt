@@ -1,0 +1,15 @@
+mongosh
+show dbs
+use db
+show collections
+db.createCollections('users')
+db.users.insertOne({id: 1, name: 'Hojlund', age: 24})
+db.users.find()
+db.users.updateOne({/tofind/  id: 1}, {/valueToSet/ $set: {age: 26}})
+db.users.find()
+db.users.deleteOne({/tobeDelete/  id: 3})
+
+mongodb server: 'mongodb://localhost:27017/mydatabase'
+mydatabase is a name of database
+
+db.shutdownServer() //to stop server
